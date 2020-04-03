@@ -1,0 +1,166 @@
+.main
+    position: relative
+    height: 100vh
+    background: linear-gradient(118.77deg, #B0E4EF 0%, #81CBDB 99.45%)
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: 1fr 4fr 1fr
+    color: $colorText
+.header
+    display: grid
+    grid-template-columns: 1.4fr 5fr 2.3fr
+    align-items: center
+.logo
+    justify-self: end
+    display: flex
+    align-items: center
+    &__img
+        margin-right: 10px
+    &__title
+        font-weight: 600
+.menu
+    display: grid
+    grid-auto-flow: column
+    justify-content: center
+    grid-gap: 30px
+    &__block
+        height: 25px
+        display: flex
+        align-items: center
+        border-bottom: 2px solid rgba(0, 0, 0,0 )
+        &:hover
+            border-bottom: 2px solid #F3705B
+            border-radius: 2px
+    &__link
+        text-decoration: none
+        color: rgba(255, 255, 255,0.7)
+        &:hover
+            color: $colorText
+.connect
+    display: grid
+    grid-auto-flow: column
+    grid-template-columns: 0.2fr 1fr
+    grid-template-rows: 1fr
+    height: 100%
+    align-items: center
+    &__inst
+    &__phone
+        display: flex
+        align-items: center
+        &-img
+            margin-right: 12px
+.base
+    display: grid
+    grid-template-columns: 1fr 1fr .1fr
+    align-items: center
+    justify-items: end
+    &__text
+        position: relative
+        z-index: 0
+        @media screen and ( min-width: 1500px )
+            justify-self: center
+        .main_title
+            margin: 0
+            margin-bottom: 26px
+            font-size: 2.5rem
+            font-weight: 600
+        .subtitle
+            font-size: 1rem
+            line-height: 22px
+            margin-bottom: 30px
+            font-weight: 400
+    &__imgs
+        position: relative
+        z-index: 0
+    &__mask
+        z-index: 1
+        width: 582px
+        height: 413px
+    &__virus
+        z-index: 2
+        position: absolute
+        &_1
+            top: 200px
+            left: -33px
+            animation-name: move1
+            animation-duration: 2s
+            animation-timing-function: cubic-bezier(.54,.21,.02,.79)
+        &_2
+            top: 240px
+            left: -71px
+            animation-name: move2
+            animation-duration: 1s
+            animation-timing-function: cubic-bezier(.19,.9,.86,.67)
+        &_3
+            top: 284px
+            left: -36px
+            animation-name: move3
+            animation-duration: 4s
+            animation-timing-function: cubic-bezier(.46,.17,.81,.94)
+        &_4
+            top: 310px
+            left: -95px
+            animation-name: move4
+            animation-duration: 3s
+            animation-timing-function: cubic-bezier(.33,.76,.89,.07)
+        &_5
+            top: 349px
+            left: -29px
+            animation-name: move5
+            animation-duration: 2s
+            animation-timing-function: cubic-bezier(.33,.76,.16,.04)
+        &_6
+            top: 397px
+            left: 26px
+            animation-name: move6
+            animation-duration: 3s
+            animation-timing-function: cubic-bezier(.25,1,.16,.04)
+        &_1,
+        &_2,
+        &_3,
+        &_4,
+        &_5,
+        &_6
+            animation-iteration-count: infinite
+        @keyframes move1
+            from
+                left: -33px
+            50% 
+                left: 15px
+            to 
+                left: -33px
+        @keyframes move2
+            from
+                left: -71px
+            50% 
+                left: 20px
+            to 
+                left: -71px
+        @keyframes move3
+            from
+                left: -36px
+            50% 
+                left: 30px
+            to 
+                left: -36px
+        @keyframes move4
+            from
+                left: -95px
+            50% 
+                left: 30px
+            to 
+                left: -95px
+        @keyframes move5
+            from
+                left: -29px
+            50% 
+                left: 60px
+            to 
+                left: -29px
+        @keyframes move6
+            from
+                left: 26px
+            50%
+                left: 110px
+            to 
+                left: 26px

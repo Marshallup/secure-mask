@@ -1,0 +1,26 @@
+.button
+    width: 165px
+    height: 49px
+    border: 0
+    border-radius: 13px
+    cursor: pointer
+    background: $colorButton
+    color: $colorText
+    font-weight: 600
+    &__order
+        margin-top: 34px
+.button
+    animation-duration: 1s
+    animation-timing-function: linear
+    animation-iteration-count: infinite
+    animation-name: huge
+    &:hover
+        box-shadow: 0px 5px 20px rgba(235, 117, 98, 0.25), 10px 0px 20px rgba(235, 117, 98, 0.25)
+@keyframes huge
+    from
+        transform: scale3d(1, 1, 1)
+    50% 
+        transform: scale3d(1.02, 1.02, 1.02)
+    to 
+        transform: scale3d(1, 1, 1)
+        
