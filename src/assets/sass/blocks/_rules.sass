@@ -1,0 +1,52 @@
+.rules
+    background-color: $bgcolor
+    padding-top: $pdTop
+    .terms-of-usage
+        margin-top: 57px
+        display: grid
+        justify-items: center
+        justify-content: center
+        grid-gap: 30px
+        grid-template-areas: "arrow-left mask arrow-right" "arrow-left . arrow-right" "iron . watch" "arrow-up-left hand arrow-up-right"
+        text-align: center
+        font-weight: 900
+        color: $colorText
+    .mask
+        grid-area: mask
+    .arrow-left
+        grid-area: arrow-left
+        justify-self: end
+        align-self: end
+    .arrow-right
+        grid-area: arrow-right
+        justify-self: start
+        align-self: end
+    .iron
+        grid-area: iron
+        margin-right: 50px
+    .watch
+        grid-area: watch
+        align-self: end
+        margin-left: 50px
+    .arrow-up-left
+        grid-area: arrow-up-left
+        justify-self: end
+        align-self: start
+    .arrow-up-right
+        grid-area: arrow-up-right
+        justify-self: start
+        align-self: start
+        margin-top: 15px
+    .hand
+        grid-area: hand
+        display: grid
+        justify-items: center
+        margin-top: 50px
+        &__img
+            justify-self: center
+    .iron__text,
+    .watch__text
+        margin-top: 10px
+    .hand__text
+        margin-top: 10px
+    
