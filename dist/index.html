@@ -17,11 +17,10 @@
                     Ставрополь</div>
             </div>
             <nav class="menu">
-                <div class="menu__block"><a href="" class="menu__link">О масках</a></div>
-                <div class="menu__block"><a href="" class="menu__link">Цена</a></div>
-                <div class="menu__block"><a href="" class="menu__link">Преимущества</a></div>
-                <div class="menu__block"><a href="" class="menu__link">Доставка</a></div>
-                <div class="menu__block"><a href="" class="menu__link">Отзывы</a></div>
+                <div class="menu__block"><a href="#benefits" class="menu__link">Преимущества</a></div>
+                <div class="menu__block"><a href="#photo" class="menu__link">Фото</a></div>
+                <div class="menu__block"><a href="#use" class="menu__link">Использование</a></div>
+                <div class="menu__block"><a href="#order" class="menu__link">Заказать</a></div>
     
             </nav>
             <div class="connect">
@@ -51,8 +50,9 @@
                 <img src="assets/img/icons/main/virus6.png" alt="virus6" class="base__virus base__virus_6">
             </div>
         </div>
+        <img src="assets/img/icons/main/arrow_down.svg" alt="arrow_down" class="main__arrow_down">
     </section>    <section class="benefits">
-        <h2 class="title">Наши преимущества</h2>
+        <h2 class="title" id="benefits" >Наши преимущества</h2>
         <div class="benefits__wrap">
             <div class="wrap__block">
                 <img src="assets/img/icons/benefits/icon1.svg" alt="mask" class="block__img">
@@ -98,20 +98,21 @@
                     под вашей дверю</div>
             </div>
         </div>
-    </section>    <section class="cost">
-        <div class="cost__block">
-            <img src="assets/img/icons/cost/ruble.svg" alt="money" class="ruble">
-            <div class="cost__title">Стоимость многоразовой маски <br>
-                для антивирусной и антимикробной <br> 
-                защиты
-                <div class="cost__price">
-                    <span>100₽</span>
-                    - 1 маска
-                </div>
+    </section>    <!-- <section class="cost">
+    <div class="cost__block">
+        <img src="assets/img/icons/cost/ruble.svg" alt="money" class="ruble">
+        <div class="cost__title">Стоимость многоразовой маски <br>
+            для антивирусной и антимикробной <br> 
+            защиты
+            <div class="cost__price">
+                <span>100₽</span>
+                - 1 маска
             </div>
         </div>
-    </section>    <section class="rules">
-        <h2 class="title">Правила использования</h2>
+    </div>
+</section> -->
+    <section class="rules">
+        <h2 class="title" id="use">Правила использования</h2>
         <div class="terms-of-usage">
             <div class="mask">
                 <img src="assets/img/icons/rules/mask.svg" alt="mask" class="mask__img">
@@ -139,7 +140,7 @@
             </div>
         </div>
     </section>    <section class="wash">
-        <video width="680" height="503" poster="https://s11.stc.all.kpcdn.net/share/i/12/11252716/inx960x640.jpg" src="" class="video"></video>
+        <video poster="https://s11.stc.all.kpcdn.net/share/i/12/11252716/inx960x640.jpg" src="" class="video"></video>
         <div class="description">
             <h2 class="title title__wash">Как стирать маску </h2>
             <div class="description__text">
@@ -191,7 +192,7 @@
             </div>
         </div>
     </section>    <section class="form">
-            <h2 class="title">Оформление заказа</h2>
+            <h2 class="title" id="order">Оформление заказа</h2>
             <div class="form__subtitle">Минимальное количетсво масок в заказе должно быть 10 штук </div>
             <form class="checkout" action="">
                 <div class="large_input">
@@ -243,6 +244,7 @@
                 </form>
             </div>
         </div>
-    </section><script src="assets/js/main.min.js"></script>
+    </section><script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="assets/js/main.min.js"></script>
 </body>
 </html>

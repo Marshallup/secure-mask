@@ -7,8 +7,12 @@
         // grid-template-columns: 2fr 1fr
         justify-content: center
         align-items: center
+        @media screen and ( max-width: 725px )
+            grid-auto-flow: row
+            grid-row-gap: 20px
     &__block_left
-        width: 571px
+        // width: 571px
+        width: 45vw
         height: 315px
         background: linear-gradient(120.12deg, #D0F1F9 1.8%, rgba(154, 202, 213, 0.6) 88.74%)
         border-bottom-left-radius: 20px
@@ -16,12 +20,18 @@
         display: grid
         grid-template-rows: 0.4fr 1fr
         align-items: center
+        @media screen and ( max-width: 725px )
+            grid-row: 2/3
+            border-radius: 20px
+            width: 300px
     &__subtitle
         margin-left: 50px
         align-self: end
         font-size: 1.75rem
         color: $colorText
         font-weight: 600
+        @media screen and ( max-width: 725px )
+            margin-left: 43px
     .data
         display: grid
         grid-auto-flow: column
@@ -31,6 +41,8 @@
         margin-left: 50px
         color: $colorText
         font-size: 1.125rem
+        @media screen and ( max-width: 725px )
+            margin-left: 43px
         &__name
             font-weight: 600
         &__info
@@ -39,10 +51,17 @@
             font-size: 1rem
     &__block_right
         width: 484px
+        // width: 36vw
         height: 516px
         padding-left: 103px
         background-color: #DFF5FC
         border-radius: 15px
+        @media screen and ( max-width: 1090px )
+            width: 400px
+            padding-left: 73px
+        @media screen and ( max-width: 725px )
+            width: 300px
+            padding-left: 43px
         .subtitle__right
             margin: 42px 0 0 0
         &__text
@@ -62,6 +81,10 @@
                 outline: none
                 border-radius: 6px
                 margin-bottom: 12px
+                @media screen and ( max-width: 1090px )
+                    width: 250px
+                @media screen and ( max-width: 725px )
+                    width: 200px
                 &:nth-child(3)
                     padding-top: 20px
                     resize: none

@@ -6,10 +6,20 @@
     grid-template-columns: 1fr
     grid-template-rows: 1fr 4fr 1fr
     color: $colorTextMain
+    &__arrow_down
+        cursor: pointer
+        justify-self: center
+        align-self: center
+        fill: #ffffff
 .header
     display: grid
-    grid-template-columns: 1.4fr 5fr 2.3fr
+    // grid-template-columns: 1.4fr 5fr 2.3fr
+    grid-template-columns: .9fr 3fr 1.2fr
     align-items: center
+    @media screen and ( min-width: 1500px )
+        grid-template-columns: 0.9fr 3fr 1fr
+    @media screen and ( max-width: 1270px )
+        grid-template-columns: 0.8fr 3fr 1fr
 .logo
     justify-self: end
     display: flex
@@ -57,6 +67,7 @@
     &__text
         position: relative
         z-index: 0
+        justify-self: center
         @media screen and ( min-width: 1500px )
             justify-self: center
         .main_title
