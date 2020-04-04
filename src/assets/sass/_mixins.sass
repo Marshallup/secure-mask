@@ -4,6 +4,15 @@
     text-align: center
     font-weight: 600
     color: #266978
+@mixin placeholder()
+  &::-webkit-input-placeholder 
+      @content
+  &:-moz-placeholder           
+      @content
+  &::-moz-placeholder          
+      @content
+  &:-ms-input-placeholder      
+      @content
 
     
     

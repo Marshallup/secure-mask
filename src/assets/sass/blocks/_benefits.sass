@@ -1,20 +1,26 @@
 .benefits
     background-color: $bgcolor
-    padding: $pdTop 0
+    padding-top: $pdTop
     &__wrap
-        margin-top: 45px
+        margin-top: 77px
         display: grid
-        grid-auto-flow: column
+        grid-template-columns: .24fr .24fr .24fr
+        grid-template-rows: 1fr 1fr
         justify-content: center
         justify-items: center
-        grid-gap: 75px
 .wrap__block
     justify-items: center
     display: grid
-    grid-template-rows: 1fr 1fr
-.block__text
+    grid-template-rows: 1fr .3fr 1fr
+.block__title
     align-self: center
-    text-align: center
     font-weight: 600
+    color: $colorText
+.block__text
+    align-self: start
+    font-size: 1rem
+    line-height: 20px
+    text-align: center
+    font-weight: 400
     color: #266978
 
