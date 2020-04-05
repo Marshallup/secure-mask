@@ -11,22 +11,31 @@
         margin-top: 34px
     &__cooperation
         margin-top: 34px
+        align-self: end
         background-color: $bgcolor
         color: $colorButton
         border: 2px solid $colorButton
         &:hover
             background: $colorButton
             color: $colorTextMain
+        @media screen and ( max-width: 769px )
+            background: $colorButton
+            color: $colorTextMain
+            
     &__form
         grid-column: 1/3
         align-self: center
         width: 293px
+        @media screen and ( max-width: 769px )
+            width: 278px
     &__contacts
         width: 293px
         @media screen and ( max-width: 1090px )
             width: 250px
-        @media screen and ( max-width: 725px )
-            width: 200px
+    &__footer
+        width: 195px
+        @media screen and ( max-width: 769px )
+            width: 130px
 .button
     animation-duration: 1s
     animation-timing-function: linear

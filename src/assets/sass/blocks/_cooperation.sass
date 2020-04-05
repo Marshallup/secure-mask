@@ -1,21 +1,32 @@
 .cooperation
     padding-top: $pdTop
     background-color: $bgcolor
+    @media screen and ( max-width: 577px )
+        padding-top: $pdTopMobile
     &__block
         display: grid
         grid-template-columns: 290px 290px
         grid-column-gap: 90px
         justify-content: center
         justify-items: center
+        @media screen and ( max-width: 769px )
+            grid-column-gap: 15px
+        @media screen and ( max-width: 577px )
+            grid-template-columns: 1fr
+            grid-row-gap: 30px
     .arrow_left_cprt,
     .arrow_right_cprt
         justify-self: center
+        @media screen and ( max-width: 577px )
+            display: none
     .parth
         margin-top: 40px
         display: grid
         justify-items: center
         text-align: center
         &__man
+            height: 116px
+            width: 116px
             justify-self: center
     .descrpt_cprt
         margin-top: 19px
@@ -23,3 +34,7 @@
         font-size: 20px
         line-height: 24px
         color: $colorText
+@media screen and ( max-width: 577px )
+    .parth__man_block
+    .parth__people_block
+        grid-row: 1/2

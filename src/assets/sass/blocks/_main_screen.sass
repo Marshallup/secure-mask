@@ -6,33 +6,73 @@
     grid-template-columns: 1fr
     grid-template-rows: 1fr 4fr 1fr
     color: $colorTextMain
+    @media screen and ( max-width: 769px )
+        grid-template-rows: .7fr 4fr
     &__arrow_down
         cursor: pointer
         justify-self: center
         align-self: center
         fill: #ffffff
+        @media screen and ( max-width: 769px )
+            display: none
+    &__burger
+        width: 30px
+        height: 20px
+        background-color: #fff
+        @media screen and ( max-width: 769px )
+            display: block
+            margin-left: 16vw
+        @media screen and ( min-width: 770px )
+            display: none
+        @media screen and ( max-width: 631px )
+            margin-left: 19vw
+        @media screen and ( max-width: 510px )
+            margin-left: 22vw
+        @media screen and ( max-width: 461px )
+            margin-left: 25vw
 .header
     display: grid
-    // grid-template-columns: 1.4fr 5fr 2.3fr
     grid-template-columns: .9fr 3fr 1.2fr
     align-items: center
     @media screen and ( min-width: 1500px )
         grid-template-columns: 0.9fr 3fr 1fr
     @media screen and ( max-width: 1270px )
         grid-template-columns: 0.8fr 3fr 1fr
+    @media screen and ( max-width: 1150px )
+        grid-template-columns: 1fr 2.4fr 1fr
+    @media screen and ( max-width: 941px )
+        grid-template-columns: 1fr 2.1fr 1fr
+        justify-items: center
+    @media screen and ( max-width: 769px )
+        grid-template-columns: 1fr 1fr
+        justify-items: start
+    @media screen and ( max-width: 577px )
+        grid-template-columns: 1fr .9fr
 .logo
     justify-self: end
     display: flex
     align-items: center
     &__img
         margin-right: 10px
+    @media screen and ( max-width: 881px )
+        justify-self: center
+    @media screen and ( max-width: 769px )
+        justify-self: end
     &__title
         font-weight: 600
+        @media screen and ( max-width: 941px )
+            font-size: 13px
+        @media screen and ( max-width: 880px )
+            font-size: 11px
 .menu
     display: grid
     grid-auto-flow: column
     justify-content: center
     grid-gap: 30px
+    @media screen and ( max-width: 941px )
+        grid-gap: 15px
+    @media screen and ( max-width: 769px )
+        display: none
     &__block
         height: 25px
         display: flex
@@ -44,6 +84,8 @@
     &__link
         text-decoration: none
         color: rgba(255, 255, 255,0.7)
+        @media screen and ( max-width: 881px )
+            font-size: 13px
         &:hover
             color: $colorTextMain
 .connect
@@ -53,10 +95,50 @@
     grid-template-rows: 1fr
     height: 100%
     align-items: center
-    &__inst
+    @media screen and ( max-width: 881px )
+        grid-template-columns: 0.3fr 1fr
+    @media screen and ( max-width: 769px )
+        grid-template-columns: 1fr 1fr
+        grid-column: 1/3
+        justify-self: center
+        justify-items: center
+        align-items: end
+    .a__inst
+        cursor: default
+        display: flex
+        align-items: center
+        @media screen and ( max-width: 769px )
+            justify-self: start
+            grid-column: 2/4
+            margin-left: 16.5vw
+        @media screen and ( max-width: 631px )
+            margin-left: 20vw
+        @media screen and ( max-width: 510px )
+            margin-left: 23vw
+        @media screen and ( max-width: 461px )
+            margin-left: 26vw
+        @media screen and ( max-width: 577px )
+            margin-left: 29vw
+        img
+            cursor: pointer
     &__phone
         display: flex
         align-items: center
+        @media screen and ( max-width: 769px )
+            justify-self: end
+            margin-right: 12px
+        @media screen and ( max-width: 577px )
+            margin-right: 5px
+        a
+            cursor: pointer
+            text-decoration: none
+            font-size: 1rem
+            color: $colorTextMain
+            font-weight: 600
+            @media screen and ( max-width: 941px )
+                font-size: 13px
+            @media screen and ( max-width: 881px )
+                font-size: 11px
         &-img
             margin-right: 12px
 .base
@@ -64,29 +146,71 @@
     grid-template-columns: 1fr 1fr .1fr
     align-items: center
     justify-items: end
+    @media screen and ( max-width: 1150px )
+        grid-template-columns: 1fr 1fr
+    @media screen and ( max-width: 769px )
+        grid-template-columns: 1fr
+        grid-auto-flow: row
+        justify-items: center
     &__text
         position: relative
         z-index: 0
         justify-self: center
         @media screen and ( min-width: 1500px )
             justify-self: center
+        @media screen and ( max-width: 1150px )
+            justify-items: center
+        @media screen and ( max-width: 769px )
+            display: grid
         .main_title
             margin: 0
             margin-bottom: 26px
             font-size: 2.5rem
             font-weight: 600
+            @media screen and ( max-width: 1150px )
+                font-size: 2rem
+            @media screen and ( max-width: 1045px )
+                font-size: 1.6rem
+            @media screen and ( max-width: 769px )
+                font-size: 1.3rem
+                text-align: center
+                margin-bottom: 16px
         .main_subtitle
             font-size: 1rem
             line-height: 22px
             margin-bottom: 30px
             font-weight: 400
+            @media screen and ( max-width: 769px )
+                font-size: .8rem
+                text-align: center
+                margin-bottom: 15px
     &__imgs
+        // align-self: start
         position: relative
         z-index: 0
+        @media screen and ( max-width: 1045px )
+            // align-self: start
+            margin-top: 50px
+            // width: 450px
+        @media screen and ( max-width: 769px )
+            margin-top: 0
+            align-self: center
     &__mask
         z-index: 1
         width: 582px
+        // width: 37vw
         height: 413px
+        // height: 55vh
+        @media screen and ( max-width: 1045px )
+            width: 480px
+            height: 360px
+        @media screen and ( max-width: 880px )
+            width: 420px
+            height: 330px
+            // height: 300px
+        @media screen and ( max-width: 769px )
+            width: 300px
+            height: 200px
     &__virus
         z-index: 2
         position: absolute
@@ -96,36 +220,67 @@
             animation-name: move1
             animation-duration: 2s
             animation-timing-function: cubic-bezier(.54,.21,.02,.79)
+            @media screen and ( max-width: 1045px )
+                top: 120px
+            @media screen and ( max-width: 769px )
+                top: 60px
         &_2
             top: 240px
             left: -71px
             animation-name: move2
             animation-duration: 1s
             animation-timing-function: cubic-bezier(.19,.9,.86,.67)
+            @media screen and ( max-width: 1045px )
+                top: 160px
+            @media screen and ( max-width: 769px )
+                top: 100px
         &_3
+            width: 35px
+            height: 30px
             top: 284px
             left: -36px
             animation-name: move3
-            animation-duration: 4s
-            animation-timing-function: cubic-bezier(.46,.17,.81,.94)
+            animation-duration: 2s
+            animation-timing-function: cubic-bezier(.73,.36,.23,.47)
+            @media screen and ( max-width: 1045px )
+                top: 204px
+            @media screen and ( max-width: 769px )
+                top: 140px
         &_4
             top: 310px
             left: -95px
             animation-name: move4
             animation-duration: 3s
             animation-timing-function: cubic-bezier(.33,.76,.89,.07)
+            @media screen and ( max-width: 1045px )
+                top: 230px
+            @media screen and ( max-width: 769px )
+                top: 170px
         &_5
+            width: 21px
+            height: 21px
             top: 349px
             left: -29px
             animation-name: move5
             animation-duration: 2s
             animation-timing-function: cubic-bezier(.33,.76,.16,.04)
+            @media screen and ( max-width: 1045px )
+                top: 289px
+            @media screen and ( max-width: 769px )
+                display: none
         &_6
-            top: 397px
+            top: 380px
             left: 26px
             animation-name: move6
             animation-duration: 3s
             animation-timing-function: cubic-bezier(.25,1,.16,.04)
+            @media screen and ( max-width: 1045px )
+                display: none
+                top: 320px
+            // @media screen and ( max-width: 910px )
+            //     display: none
+            // @media screen and ( max-height: 1040px )
+            //     display: none
         &_1,
         &_2,
         &_3,

@@ -1,0 +1,71 @@
+.footer
+    background-color: #2F5760
+    height: 253px
+    display: grid
+    grid-template-columns: 1.1fr 3fr 1.1fr
+    justify-items: end
+    @media screen and ( max-width: 769px )
+        grid-template-columns: 1.5fr 2fr 1.4fr
+    &__logo
+        display: grid
+        grid-template-columns: .3fr 1fr
+        align-items: center
+        color: #ffffff
+    &__rights
+        margin-top: 36px
+        margin-left: 5px
+        font-weight: 600
+        font-size: .875rem
+        line-height: 17px
+        color: $footerColorText
+    &__block_menu
+        justify-items: start
+        @media screen and ( max-width: 769px )
+            margin-left: -30px
+    &__menu
+        @media screen and ( max-width: 769px )
+            display: inline-block
+            margin-left: 10px
+    .paymenths
+        margin-top: 40px
+        display: grid
+        grid-template-columns: .27fr .19fr .24fr
+        justify-items: start
+        align-items: start
+        @media screen and ( max-width: 769px )
+            margin-top: 20px
+    &__block
+        &_logo
+            margin-top: 58px
+        &_menu
+            margin: 66px 0 0 60px
+            justify-self: start
+            @media screen and ( max-width: 769px )
+                margin: 0
+                margin-top: 66px
+                justify-self: center
+        &_connect
+            margin-top: 58px
+            justify-self: start
+            display: grid
+            grid-template-rows: 1fr 1fr 1fr
+            .connect__inst
+                justify-self: end
+                @media screen and ( max-width: 769px )
+                    justify-self: start
+            .connect__phone
+                grid-row: 2/2
+                justify-self: end
+                a
+                    text-decoration: none
+                    font-size: 1rem
+                    color: $footerColorText
+                    font-weight: 600
+                    @media screen and ( max-width: 769px )
+                        font-size: .9rem
+@media screen and ( max-width: 769px )
+    .paymenths
+        grid-column-gap: 10px
+    .img_visa,
+    .img_mir
+        width: 70px

@@ -1,13 +1,18 @@
 $(document).ready(function() {
     $('.main__arrow_down').click(function() {
-        let target = $('.benefits')
+        let target = $('#benefits')
         $('html, body').animate({
-            scrollTop: target.offset().top
+            scrollTop: target.offset().top - 30
         }, 900)
     })
     $('a[href^="#"]').click(function() {
         let targetLink = $(this).attr('href')
-        if ( targetLink == '#order') {
+        console.log(targetLink)
+        if ( targetLink == '#benefits') {
+            $('html, body').animate({
+                scrollTop: $(targetLink).offset().top
+            }, 900)
+        } else if ( targetLink == '#order') {
             $('html, body').animate({
                 scrollTop: $(targetLink).offset().top - 100
             }, 2900)
@@ -17,4 +22,9 @@ $(document).ready(function() {
             }, 900)
         }
     })
+
+    $('.slider__block').slick({
+        dots: true,
+        speed: 1000
+    });
 })

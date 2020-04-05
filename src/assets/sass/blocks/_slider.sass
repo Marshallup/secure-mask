@@ -1,0 +1,86 @@
+.slider
+    background-color: $bgcolor
+    padding-top: $pdTop
+    @media screen and ( max-width: 577px )
+        padding-top: $pdTopMobile
+    &__block
+        margin-top: 63px
+        position: relative
+        overflow: hidden
+    &__item
+        text-align: center
+        img
+            width: 600px
+            // width: 65vw
+            // height: 30vh
+            height: 404px
+            border-radius: 40px
+            // @media screen and ( max-width: 1199px )
+            //     width: 55vw
+                // height: 50vh
+            @media screen and ( max-width: 769px )
+                width: 500px
+                height: 380px
+            @media screen and ( min-width: 1200px )
+                width: 700px
+            @media screen and ( max-width: 577px )
+                width: 264px
+                height: 300px
+    .slider-list
+        overflow: hidden
+    .slick-track
+        display: flex
+    .slick-arrow
+        position: absolute
+        top: 50%
+        z-index: 10
+        font-size: 0
+        width: 30px
+        height: 30px
+        border: 0
+        cursor: pointer
+    .slick-prev
+        background: url('../img/icons/slider/prev.svg') center center/cover no-repeat
+        left: 12vw
+        margin-top: -40px
+        @media screen and ( max-width: 769px )
+            // left: 9vw
+            display: none
+        @media screen and ( min-width: 1500px )
+            left: 22vw
+        @media screen and ( max-width: 1300px )
+            left: 100px
+        @media screen and ( max-width: 879px )
+            left: 50px
+    .slick-next
+        margin-top: -40px
+        background: url('../img/icons/slider/next.svg') center center/cover no-repeat
+        right: 12vw
+        @media screen and ( max-width: 769px )
+            display: none
+            right: 9vw
+        @media screen and ( min-width: 1500px )
+            right: 22vw
+        @media screen and ( max-width: 1300px )
+            right: 100px
+        @media screen and ( max-width: 879px )
+            right: 50px
+    .slick-dots
+        margin-top: 40px
+        display: flex
+        align-items: center
+        justify-content: center
+        li
+            margin: 0 22px
+            list-style: none
+        .slick-active
+            button
+                background-color: #266978
+        button
+            cursor: pointer
+            width: 8px
+            height: 8px
+            font-size: 0
+            border: 1px solid #266978
+            border-radius: 100%
+            background-color: $bgcolor

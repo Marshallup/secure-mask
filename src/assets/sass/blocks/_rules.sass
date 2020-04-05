@@ -1,6 +1,8 @@
 .rules
     background-color: $bgcolor
     padding-top: $pdTop
+    @media screen and ( max-width: 577px )
+        padding-top: $pdTopMobile
     .terms-of-usage
         margin-top: 57px
         display: grid
@@ -9,8 +11,15 @@
         grid-gap: 30px
         grid-template-areas: "arrow-left mask arrow-right" "arrow-left . arrow-right" "iron . watch" "arrow-up-left hand arrow-up-right"
         text-align: center
-        font-weight: 900
+        font-weight: 700
         color: $colorText
+        @media screen and ( max-width: 577px )
+            font-size: 13px
+            margin-top: 37px
+            grid-gap: 5px
+            img
+                // width: 67px
+                // height: 67px
     .mask
         grid-area: mask
     .arrow-left
@@ -24,10 +33,14 @@
     .iron
         grid-area: iron
         margin-right: 50px
+        @media screen and ( max-width: 577px )
+            margin-right: 0
     .watch
         grid-area: watch
         align-self: end
         margin-left: 50px
+        @media screen and ( max-width: 577px )
+            margin-left: 0
     .arrow-up-left
         grid-area: arrow-up-left
         justify-self: end
@@ -37,6 +50,10 @@
         justify-self: start
         align-self: start
         margin-top: 15px
+    &__arrow
+        @media screen and ( max-width: 577px )
+            width: 32px
+            height: 32px
     .hand
         grid-area: hand
         display: grid
@@ -44,6 +61,10 @@
         margin-top: 50px
         &__img
             justify-self: center
+    &__img
+        @media screen and ( max-width: 577px )
+            width: 67px
+            height: 67px
     .iron__text,
     .watch__text
         margin-top: 10px

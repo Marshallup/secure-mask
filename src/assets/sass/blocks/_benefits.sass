@@ -1,6 +1,8 @@
 .benefits
     background-color: $bgcolor
     padding-top: $pdTop
+    @media screen and ( max-width: 577px )
+        padding-top: $pdTopMobile
     &__wrap
         margin-top: 77px
         display: grid
@@ -8,12 +10,19 @@
         grid-template-rows: 1fr 1fr
         justify-content: center
         justify-items: center
+        @media screen and ( max-width: 769px )
+            grid-template-columns: 1fr 1fr
+        @media screen and ( max-width: 577px )
+            grid-template-columns: 1fr
+            grid-template-rows: repeat(6, 1fr)
+            
 .wrap__block
     justify-items: center
     display: grid
     grid-template-rows: 1fr .3fr 1fr
 .block__title
     align-self: center
+    text-align: center
     font-weight: 600
     color: $colorText
 .block__text
