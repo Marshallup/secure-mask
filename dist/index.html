@@ -17,8 +17,8 @@
                 <div class="logo__title">Защитные маски <br>
                     Ставрополь</div>
             </div>
-            <div class="main__burger"></div>
-            <nav class="menu">
+            <div class="main__burger"><span></span></div>
+            <nav class="menu main__menu">
                 <div class="menu__block"><a href="#benefits" class="menu__link">Преимущества</a></div>
                 <div class="menu__block"><a href="#photo" class="menu__link">Фото</a></div>
                 <div class="menu__block"><a href="#use" class="menu__link">Использование</a></div>
@@ -104,9 +104,18 @@
     </section>    <section class="slider">
         <h2 class="title" id="photo">Как выглядит маска</h2>
         <div class="slider__block">
+            <div class="slider__item">
+                <img class="slider__search" src="assets/img/icons/slider/search.svg" alt="search">
+                <button class="button button__slider">Посмотреть</button>
+            </div>
+            <!-- <div class="slider__item"><img src="https://cdn.pixabay.com/photo/2020/03/27/17/03/shopping-4974313_960_720.jpg" alt=""></div>
             <div class="slider__item"><img src="https://cdn.pixabay.com/photo/2020/03/27/17/03/shopping-4974313_960_720.jpg" alt=""></div>
-            <div class="slider__item"><img src="https://cdn.pixabay.com/photo/2020/03/27/17/03/shopping-4974313_960_720.jpg" alt=""></div>
-            <div class="slider__item"><img src="https://cdn.pixabay.com/photo/2020/03/27/17/03/shopping-4974313_960_720.jpg" alt=""></div>
+            <div class="slider__item"><img src="https://cdn.pixabay.com/photo/2020/03/27/17/03/shopping-4974313_960_720.jpg" alt=""></div> -->
+            <div class="dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
         </div>
     </section>    <!-- <section class="cost">
     <div class="cost__block">
@@ -142,7 +151,7 @@
                     2 часа</div>
             </div>
             <img src="assets/img/icons/rules/arrow_up_left.png" alt="arrow-up-left" class="rules__arrow arrow-up-left">
-            <img src="assets/img/icons/rules/arrow_up_right1.png" alt="arrow-up-right" class="rules__arrow arrow-up-right">
+            <img src="assets/img/icons/rules/arrow_up_right.png" alt="arrow-up-right" class="rules__arrow arrow-up-right">
             <div class="hand">
                 <img src="assets/img/icons/rules/hand.svg" alt="hand" class="rules__img hand__img">
                 <div class="hand__text">Постирать <br>
@@ -150,7 +159,10 @@
             </div>
         </div>
     </section>    <section class="wash">
-        <video poster="https://s11.stc.all.kpcdn.net/share/i/12/11252716/inx960x640.jpg" src="" class="video"></video>
+        <!-- <video poster="https://s11.stc.all.kpcdn.net/share/i/12/11252716/inx960x640.jpg" src="" class="video"></video> -->
+        <div class="video">
+            <img src="assets/img/icons/play.svg" alt="play" class="video__play">
+        </div>
         <div class="description">
             <h2 class="title title__wash">Как стирать маску </h2>
             <div class="description__text">
@@ -223,7 +235,7 @@
     </section>    <section class="form">
             <h2 class="title" id="order">Оформление заказа</h2>
             <div class="form__subtitle">Минимальное количетсво масок в заказе должно быть 10 штук </div>
-            <form class="checkout" action="">
+            <form class="checkout" method="POST" action="">
                 <div class="large_input">
                     <input type="text" placeholder="Ваше имя">
                     <input type="text" placeholder="Ваш телефон">

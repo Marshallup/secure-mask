@@ -13,14 +13,22 @@
         justify-items: center
         padding-top: $pdTopMobile
     .video
+        background: #DFF5FC
+        border: 3px solid #266978
+        border-radius: 40px
         width: 50vw
         height: 70vh
+        display: flex
+        align-items: center
+        justify-content: center
         @media screen and ( max-width: 769px )
             width: 450px
             height: 350px
         @media screen and ( max-width: 577px )
             width: 262px
             height: 257px
+        @media screen and ( min-height: 769px )
+            height: 400px
     .description
         @media screen and ( max-width: 769px )
             text-align: center

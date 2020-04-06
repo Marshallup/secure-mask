@@ -46,10 +46,14 @@
         justify-self: end
         align-self: start
     .arrow-up-right
+        width: 77px
         grid-area: arrow-up-right
         justify-self: start
         align-self: start
         margin-top: 15px
+        @media screen and ( max-width: 577px )
+            width: 32px
+            margin-top: 0
     &__arrow
         @media screen and ( max-width: 577px )
             width: 32px
