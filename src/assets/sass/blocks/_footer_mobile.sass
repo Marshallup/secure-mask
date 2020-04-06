@@ -1,0 +1,55 @@
+.footer__mobile
+    display: none
+@media screen and ( max-width: 577px )
+    .footer__mobile
+        display: grid
+        background-color: #2F5760
+        font-size: 16px
+        color: rgba(255, 255, 255,.7 )
+        font-weight: 600
+        .footer__block
+            &_logo__mobile
+                display: grid
+                .footer__logo__mobile
+                    margin: 57px 0 42px 0
+                    display: grid
+                    grid-auto-flow: column
+                    justify-self: center
+                    align-items: center
+                    .logo__img__mobile
+                        margin-right: 10px
+                        line-height: 20px
+                    .logo__title__mobile
+                        color: rgba(255, 255, 255,.7 )
+                        font-weight: 600
+            &_connect__mobile
+                display: flex
+                justify-content: center
+                .connect__phone__mobile
+                    display: flex
+                    margin-right: 46px
+                    a
+                        align-self: center
+                        text-decoration: none
+                        color: rgba(255, 255, 255,.7 )
+                        font-weight: 600
+                .connect__phone-img__mobile
+                    margin-right: 10px
+        .paymenths__mobile
+            margin-top: 42px
+            display: flex
+            justify-content: center
+            img
+                margin-right: 24px
+    .footer__block_menu__mobile
+        margin-top: 32px
+        justify-self: center
+        text-align: center
+        .menu__block__mobile
+            margin-bottom: 20px
+        a
+            text-decoration: none
+            color: rgba(255, 255, 255,.7 )
+    .footer__rights__mobile
+        margin: 24px 0 63px 0
+        text-align: center

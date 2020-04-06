@@ -8,6 +8,10 @@
     color: $colorTextMain
     @media screen and ( max-width: 769px )
         grid-template-rows: .7fr 4fr
+    @media screen and ( max-height: 1100px )
+        grid-template-rows: 1fr 3fr 1fr
+    @media screen and ( min-height: 1101px )
+        grid-template-rows: 1fr 2fr 1fr
     &__arrow_down
         cursor: pointer
         justify-self: center
