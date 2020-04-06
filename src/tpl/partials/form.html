@@ -1,12 +1,19 @@
 <section class="form">
         <h2 class="title" id="order">Оформление заказа</h2>
         <div class="form__subtitle">Минимальное количетсво масок в заказе должно быть 10 штук </div>
-        <form class="checkout" method="POST" action="">
+        <form name="order" class="checkout" method="POST" action="">
             <div class="large_input">
-                <input type="text" placeholder="Ваше имя">
-                <input type="text" placeholder="Ваш телефон">
-                <input type="text" placeholder="Количество масок">
-                <input type="text" class="large_input_color amount_mask" placeholder="Выбрать цвет">
+                <input name="name" type="text" placeholder="Ваше имя">
+                <input name="phone" type="text" placeholder="Ваш телефон">
+                <input name="amount" type="text" placeholder="Количество масок">
+                <!-- <select class="large_input_color amount_mask" placeholder="Выбрать цвет" name="color" id="d">
+                    <option value="white">Белый</option>
+                </!-->
+                <!-- <input name="color" type="text" class="large_input_color amount_mask" placeholder="Выбрать цвет"> -->
+                <select placeholder="Выбрать цвет" class="large_input_color amount_mask" name="color" id="d">
+                    <option disabled selected >Выберите цвет</option>
+                    <option value="white">Белый</option>
+                </select>
                 <div class="large__price">
                     <span>Цена</span>
                     <span class="large__cost">100₽</span>
@@ -14,10 +21,14 @@
                 </div>
             </div>
             <div class="small_input">
-                <input type="text" placeholder="Название улицы">
-                <input type="text" placeholder="Номер дома">
+                <input name="street" type="text" placeholder="Название улицы">
+                <input name="house_number" type="text" placeholder="Номер дома">
                 <input type="text" placeholder="Подъезд">
-                <input type="text" class="amount_mask" placeholder="Выбрать цвет">
+                <!-- <input name="amount" type="text" class="amount_mask" placeholder="Выбрать цвет"> -->
+                <select placeholder="Выбрать цвет" class="amount_mask" name="color" id="d">
+                    <option >Выберите цвет</option>
+                    <option value="white">Белый</option>
+                </select>
                 <button type="submit" class="button button__form">ЗАКАЗАТЬ</button>
             </div>
         </form>

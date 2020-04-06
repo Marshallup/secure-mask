@@ -31,24 +31,7 @@
 @media screen and (max-width: 769px) {
     .main {
         grid-template-rows: .7fr 4fr;
-    }
-}
-
-@media screen and (max-height: 1100px) {
-    .main {
-        grid-template-rows: 1fr 3fr .7fr;
-    }
-}
-
-@media screen and (min-height: 1101px) {
-    .main {
-        grid-template-rows: 1fr 2fr 1fr;
-    }
-}
-
-@media screen and (max-height: 670px) {
-    .main {
-        grid-template-rows: 1fr 3fr;
+        height: 600px;
     }
 }
 
@@ -1520,49 +1503,6 @@
     }
 }
 
-.cost {
-    background-color: #F7FEFF;
-    padding-top: 157px;
-}
-
-.cost__block {
-    margin: 0 auto;
-    width: 67vw;
-    height: 249px;
-    border: 3px solid #266978;
-    border-radius: 20px;
-    background: #DFF5FC;
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 0.4fr 1fr;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-}
-
-.cost__title {
-    justify-self: start;
-    font-weight: 600;
-    font-size: 1.4375rem;
-    line-height: 28px;
-    text-align: center;
-    color: #266978;
-}
-
-.cost__price {
-    margin-top: 22px;
-}
-
-.cost__price span {
-    font-weight: 900;
-    font-size: 3.125rem;
-}
-
-.cost .ruble {
-    justify-self: center;
-}
-
 .form {
     padding-top: 157px;
     background-color: #F7FEFF;
@@ -1748,6 +1688,15 @@
     .form .small_input .amount_mask {
         display: none;
     }
+}
+
+.amount_mask {
+    height: 55px;
+    border: 1px solid #266978;
+    border-radius: 6px;
+    background-color: #F7FEFF;
+    padding-left: 15px;
+    outline: none;
 }
 
 .large_input_color {

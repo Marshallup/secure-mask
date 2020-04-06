@@ -45,6 +45,63 @@ $(document).ready(function() {
     // });
     // $('.slider__block').slick("unslick")
 })
+let button_f = document.querySelector('.button__form');
+let form_order = document.forms.order.amount
+let price = document.querySelector('.large__cost')
+let price_old = price.innerHTML
+let large__amout = document.querySelector('.large__amount')
+
+button_f.onclick = () => {
+    if (form_order.value % 10 != 0) {
+        alert('Введите число кратное 10')
+        return false
+    }
+}
+form_order.oninput = () => {
+    large__amout.remove()
+    if (form_order.value.length > 4) {
+        return false
+    }
+    if ( !parseInt(form_order.value)) {
+        console.log()
+        return false
+    }
+        price.innerHTML = parseInt(form_order.value) * 100
+}
+form_order.onkeydown = (e) => {
+    console.log(e)
+}
+form_order.onchange = () => {
+    if ( price.innerHTML == 0 ) {
+        price.innerHTML = price_old
+        document.querySelector('.large__price').append(large__amout)
+    }
+    if ( form_order.value == '') {
+        price.innerHTML = price_old
+        document.querySelector('.large__price').append(large__amout)
+    }
+    console.log(form_order.value)
+}
+
+$(function() {
+    $(document).on("change keyup input click", "input[name='amount']", function() {
+        if(this.value.match(/[^0-9]/g)){
+            this.value = this.value.replace(/[^0-9]/g, "");
+        };
+    });
+    $(document).on("change keyup input click", "input[name='phone']", function() {
+        if(this.value.match(/[^0-9]/g)){
+            this.value = this.value.replace(/[^0-9]/g, "");
+        };
+    });
+});
+
+// "input[name='phone']"
+
+// input.oninput = function() {
+//     result.innerHTML = input.value;
+//   };
+
 let menu = document.querySelector('.main__menu');
 let burger = document.querySelector('.main__burger');
 let body = document.body;
