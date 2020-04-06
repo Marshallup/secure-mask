@@ -1400,6 +1400,7 @@
 
 @media screen and (max-width: 769px) {
     .wash .description {
+        margin-top: 30px;
         text-align: center;
     }
 }
@@ -1945,6 +1946,7 @@
 .contacts__block_right form input,
       .contacts__block_right form textarea {
     width: 293px;
+    resize: none;
     height: 55px;
     padding-left: 16px;
     background: #F5FDFF;
@@ -1968,8 +1970,8 @@
     }
 }
 
-.contacts__block_right form input:nth-child(3),
-        .contacts__block_right form textarea:nth-child(3) {
+.contacts__block_right form input:nth-child(6),
+        .contacts__block_right form textarea:nth-child(6) {
     padding-top: 20px;
     resize: none;
     height: 141px;
@@ -2035,6 +2037,11 @@
     }
 }
 
+.textzone {
+    width: 500px;
+    height: 300px;
+}
+
 .footer {
     background-color: #2F5760;
     height: 253px;
@@ -2062,7 +2069,7 @@
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    color: #ffffff;
+    color: rgba(255, 255, 255, 0.6);
 }
 
 .footer__rights {

@@ -9,7 +9,7 @@
                     </div>
                     <div class="data__wrap">
                         <div class="data__name">E-mail</div>
-                        <div class="data__info">art-belenko@yandex.ru</div>
+                        <div class="data__info">maskastav@yandex.ru</div>
                     </div>
                     <div class="data__wrap">
                         <div class="data__name">Адрес</div>
@@ -24,10 +24,15 @@
         <div class="contacts__block contacts__block_right">
             <div class="contacts__subtitle subtitle__right">Остались вопросы?</div>
             <div class="contacts__block_right__text">Задайте их нам прямо сейчас !</div>
-            <form class="contacts__form" action="">
-                <input placeholder="Ваше имя" type="text">
-                <input placeholder="Ваш номер телефона" type="text">
-                <textarea placeholder="Введите сообщение" type="text"></textarea>
+            <form class="contacts__form" method="POST" action="">
+                <!-- Hidden Required Fields -->
+                <input type="hidden" name="project_name" value="Sitdsde Name">
+                <input type="hidden" name="admin_email" value="televonvea@gmail.com">
+                <input type="hidden" name="form_subject" value="Formsds Subject">
+                <!-- END Hidden Required Fields -->
+                <input name="Имя_заказчика" placeholder="Ваше имя" type="text">
+                <input name="Номер_телефона" placeholder="Ваш номер телефона" type="text">
+                <textarea class="textzone" name="Сообщение" placeholder="Введите сообщение" type="text"></textarea>
                 <button class="button button__contacts">Задать вопрос</button>
             </form>
         </div>

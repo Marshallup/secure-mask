@@ -68,6 +68,10 @@ function html() {
         .pipe(dest(path.build.html))
         .pipe(browsersync.stream());
 }
+function php() {
+    return src('src/*.php')
+        .pipe(dest('dist/'))
+}
 function css() {
     return src(path.src.css, {base: "src/assets/sass/"})
         .pipe(plumber())
@@ -122,10 +126,11 @@ function watchFiles() {
     gulp.watch([path.watch.images], images);
 }
 
-const build = gulp.series(clean, gulp.parallel(html, css, js, images, mainfiles));
+const build = gulp.series(clean, gulp.parallel(html, css, js, images, php, mainfiles));
 const watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.html = html;
+exports.php = php;
 exports.css = css;
 exports.images = images;
 exports.mainfiles = mainfiles;

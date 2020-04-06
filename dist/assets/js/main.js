@@ -1,4 +1,37 @@
 $(document).ready(function() {
+
+    //E-mail Ajax Send
+	$(".contacts__form").submit(function() { //Change
+		var th = $(this);
+		$.ajax({
+			type: "POST",
+			url: "mail.php", //Change
+			data: th.serialize()
+		}).done(function() {
+			alert("Спасибо ! Мы свяжемся с вами в ближайшее время !");
+			setTimeout(function() {
+				// Done Functions
+				th.trigger("reset");
+			}, 1000);
+		});
+		return false;
+    });
+    $(".checkout").submit(function() { //Change
+		var th = $(this);
+		$.ajax({
+			type: "POST",
+			url: "mail.php", //Change
+			data: th.serialize()
+		}).done(function() {
+			alert("Спасибо за заказ ! Мы свяжемся с вами в ближайшее время !");
+			setTimeout(function() {
+				// Done Functions
+				th.trigger("reset");
+			}, 1000);
+		});
+		return false;
+	});
+
     $('.main__arrow_down').click(function() {
         let target = $('#benefits')
         $('html, body').animate({
@@ -46,30 +79,24 @@ $(document).ready(function() {
     // $('.slider__block').slick("unslick")
 })
 let button_f = document.querySelector('.button__form');
-let form_order = document.forms.order.amount
+let form_order = document.querySelector('.amount_mask')
 let price = document.querySelector('.large__cost')
 let price_old = price.innerHTML
 let large__amout = document.querySelector('.large__amount')
 
-button_f.onclick = () => {
-    if (form_order.value % 10 != 0) {
-        alert('Введите число кратное 10')
-        return false
-    }
-}
+
 form_order.oninput = () => {
-    large__amout.remove()
+    if ( parseInt(form_order.value)) {
+        large__amout.remove()
+    }
+    
     if (form_order.value.length > 4) {
         return false
     }
     if ( !parseInt(form_order.value)) {
-        console.log()
         return false
     }
-        price.innerHTML = parseInt(form_order.value) * 100
-}
-form_order.onkeydown = (e) => {
-    console.log(e)
+        price.innerHTML = parseInt(form_order.value) * 100 + '₽'
 }
 form_order.onchange = () => {
     if ( price.innerHTML == 0 ) {
@@ -80,16 +107,24 @@ form_order.onchange = () => {
         price.innerHTML = price_old
         document.querySelector('.large__price').append(large__amout)
     }
-    console.log(form_order.value)
+}
+button_f.onclick = () => {
+    price.innerHTML = price_old
+    document.querySelector('.large__price').append(large__amout)
 }
 
 $(function() {
-    $(document).on("change keyup input click", "input[name='amount']", function() {
+    $(document).on("change keyup input click", "input[name='Количество']", function() {
         if(this.value.match(/[^0-9]/g)){
             this.value = this.value.replace(/[^0-9]/g, "");
         };
     });
-    $(document).on("change keyup input click", "input[name='phone']", function() {
+    $(document).on("change keyup input click", "input[name='Телефон']", function() {
+        if(this.value.match(/[^0-9]/g)){
+            this.value = this.value.replace(/[^0-9]/g, "");
+        };
+    });
+    $(document).on("change keyup input click", "input[name='Номер_телефона']", function() {
         if(this.value.match(/[^0-9]/g)){
             this.value = this.value.replace(/[^0-9]/g, "");
         };
