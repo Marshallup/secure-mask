@@ -7,6 +7,9 @@
     background: $colorButton
     color: $colorTextMain
     font-weight: 600
+    &__main
+        @media screen and ( max-width: 769px )
+            margin-top: 20px
     &__order
         margin-top: 34px
     &__cooperation
@@ -22,10 +25,10 @@
             background: $colorButton
             color: $colorTextMain
     &__slider
-        margin-top: 76px
+        display: block
+        margin: 0 auto
         @media screen and ( max-width: 577px )
-            margin-top: 45px
-            
+            margin-top: 0
     &__form
         grid-column: 1/3
         align-self: center

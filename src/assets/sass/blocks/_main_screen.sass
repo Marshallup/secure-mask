@@ -8,8 +8,8 @@
     grid-template-rows: 1fr 4fr 1fr
     color: $colorTextMain
     @media screen and ( max-width: 769px )
-        grid-template-rows: .7fr 4fr
-        height: 600px
+        grid-template-rows: .8fr 4fr
+        height: 700px
     // @media screen and ( max-height: 1100px )
         // grid-template-rows: 1fr 3fr .7fr
     // @media screen and ( min-height: 1101px )
@@ -82,11 +82,16 @@
     display: flex
     align-items: center
     &__img
-        margin-right: 10px
+        margin-right: 11px
     @media screen and ( max-width: 881px )
         justify-self: center
     @media screen and ( max-width: 769px )
         justify-self: end
+        margin-right: 10px
+    @media screen and ( max-width: 577px )
+        margin-right: 21px
+    @media screen and ( max-width: 385px )
+        margin-right: 17px
     &__title
         font-weight: 600
         @media screen and ( max-width: 941px )
@@ -131,7 +136,7 @@
         grid-column: 1/3
         justify-self: center
         justify-items: center
-        align-items: center
+        align-items: end
     .a__inst
         cursor: default
         display: flex
@@ -155,9 +160,6 @@
         align-items: center
         @media screen and ( max-width: 769px )
             justify-self: end
-            margin-right: 12px
-        @media screen and ( max-width: 577px )
-            margin-right: 5px
         a
             cursor: pointer
             text-decoration: none
@@ -168,6 +170,8 @@
                 font-size: 13px
             @media screen and ( max-width: 881px )
                 font-size: 11px
+            @media screen and ( max-width: 769px )
+                font-size: .9rem
         &-img
             margin-right: 12px
 .base
@@ -179,6 +183,7 @@
         grid-template-columns: 1fr 1fr
     @media screen and ( max-width: 769px )
         grid-template-columns: 1fr
+        grid-template-rows: 1fr 1fr
         grid-auto-flow: row
         justify-items: center
     &__text

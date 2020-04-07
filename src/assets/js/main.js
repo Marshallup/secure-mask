@@ -71,13 +71,21 @@ $(document).ready(function() {
         }
     })
 
-    // $('.slider__block').slick({
-    //     settings: "unslick",
-    //     dots: true,
-    //     speed: 1000
-    // });
-    // $('.slider__block').slick("unslick")
+    $('.slider__block').slick({
+        settings: "unslick",
+        dots: true,
+        speed: 400,
+        responsive: [
+            {
+                breakpoint: 769,
+                settings: {
+                    arrows: false
+                }
+            }
+        ]
+    });
 })
+
 let button_f = document.querySelector('.button__form');
 let form_order = document.querySelector('.amount_mask')
 let price = document.querySelector('.large__cost')
@@ -153,5 +161,32 @@ window.onload = () => {
                 menu.classList.remove('menu__active')
             }
         }
+    }
+    let showSlier = document.querySelector('.button__slider');
+    let arrowsSlider = document.querySelectorAll('.slick-arrow');
+    let searchBlock = document.querySelector('.block__searchBut');
+    let slickDots = document.querySelector('.slick-dots');
+    let drag = document.querySelector('.slick-track')
+    let sliderItemWIdth = document.querySelectorAll('.slider__item');
+    let sliderBlock = document.querySelector('.slider__block');
+    let width = getComputedStyle(sliderItemWIdth[0]).width;
+    let height = getComputedStyle(sliderBlock).height;
+    drag.classList.remove('slick-track')
+    drag.style.height = height;
+    slickDots.style.display = 'none';
+    
+    for ( arrow of arrowsSlider) {
+        arrow.style.display = 'none'
+    }
+    showSlier.onclick = () => {
+        searchBlock.style.display = 'none'
+        drag.classList.add('slick-track')
+        for ( slwidth of sliderItemWIdth) {
+            slwidth.style.width = width;
+        }
+        for ( arrow of arrowsSlider) {
+            arrow.style.display = 'flex'
+        }
+        slickDots.style.display = 'flex'
     }
 }
